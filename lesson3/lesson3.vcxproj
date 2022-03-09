@@ -141,9 +141,13 @@
   <ItemGroup>
     <ClCompile Include="lesson3.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MyIntContainer.cpp" />
+    <ClCompile Include="MyIterator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MyIntContainer.h" />
+    <ClInclude Include="MyIterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

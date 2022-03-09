@@ -8,6 +8,9 @@
 #include <list>
 #include <algorithm>
 #include <string_view>
+#include "Matrix.h"
+#include "MyIterator.h"
+#include "MyIntContainer.h"
 
 using namespace std;
 
@@ -49,28 +52,38 @@ void Zadanie2()
     Реализовать в нем метод, вычисляющий определитель матрицы.
     ----------------------------------------------------*/
 
+    // Матрица 3х3, инициализирована 0
+    std::cout << "Input size: ";
+    int d{ 0 };
+    std::cin >> d;
+
+
+    Matrix matr(d);
+    matr.Initialize();
+
+    std::cout << matr;
+    std::cout << "Determinant = " << matr.Determinant();
     
 
 };
 
-string readFile(const string& fileName) {
-    std::ifstream f(fileName);
-    f.seekg(0, ios::end);
-    size_t size = f.tellg();
-    string s(size, ' ');
-    f.seekg(0);
-    f.read(&s[0], size); // по стандарту можно в C++11, по факту работает и на старых компиляторах
-    return s;
-}
+
 
 
 void Zadanie3()
 {
     /*--------------------------------------------------
-    
-
+    Реализовать собственный класс итератора, 
+    с помощью которого можно будет проитерироваться по диапазону целых чисел в цикле for-range-based
     ----------------------------------------------------*/
-    
+    MyIntContainer mc{ 1,2,3,4,5,7,8,9 };
+
+    for (auto var:mc)
+    {
+        std::cout << var;
+    }
+
+
 };
 
 
